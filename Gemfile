@@ -8,3 +8,8 @@ group :development, :test do
   gem "rspec"
 end
 gem 'sinatra'
+gem 'capybara'
+gem 'rspec'
+gem 'shotgun'
+gem 'thin'
+gem 'selenium-webdriver'
