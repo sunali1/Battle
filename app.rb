@@ -18,6 +18,8 @@ end
   get'/play' do
     @name1 = session[:name1]
     @name2 = session[:name2]
+    @hitpoint1 = 100
+    @hitpoint2 = 200
   erb(:play)
   end
 run! if app_file == $0 #ASK ED WHY DIDNT RUN WHEN WAS BEFORE '/'
