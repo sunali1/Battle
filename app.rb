@@ -1,10 +1,9 @@
 require 'sinatra/base'
 
-class Battle < Sinatra::Application
+class Battle < Sinatra::Base
   enable :sessions
 
   get '/' do
-  #"Testing infrastructure working"
   erb(:index)
   end
 
@@ -18,9 +17,13 @@ end
   get'/play' do
     @name1 = session[:name1]
     @name2 = session[:name2]
-    @hitpoint1 = 100
-    @hitpoint2 = 200
-  erb(:play)
+    erb(:play)
+  end
+
+  get'/attack' do
+    @name1 = session[:name1]
+    @name2 = session[:name2]
+    erb(:attack)
   end
 run! if app_file == $0 #ASK ED WHY DIDNT RUN WHEN WAS BEFORE '/'
 end
