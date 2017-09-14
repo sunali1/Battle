@@ -21,8 +21,9 @@ end
   end
 
   get'/attack' do
-    @name1 = $player_1.name
-    @name2 = $player_2.name
+    @name1 = $player_1
+    @name2 = $player_2
+    @player_1.attack(@player_2)
     erb(:attack)
   end
 run! if app_file == $0 #ASK ED WHY DIDNT RUN WHEN WAS BEFORE '/'
