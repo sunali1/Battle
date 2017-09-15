@@ -13,13 +13,6 @@ end
       expect(sunali.hit_points).to eq described_class::DEFAULT_HIT_POINTS
     end
   end
-
-describe '#attack' do
-  it "damages the player" do
-    expect(rory).to receive(:receive_damage)
-    sunali.attack(rory)
-  end
-end
 describe '#receive_damage' do
   it "reduces the player hit points" do
     expect {rory.receive_damage}.to change {rory.hit_points}.by(-10)
